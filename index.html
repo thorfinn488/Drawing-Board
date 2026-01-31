@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Pad</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            width: 700px;
+        }
+
+        h1 {
+            color: #e2e8f0;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        #clearBtn {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 12px;
+            width: 100%;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        #clearBtn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        svg {
+            background-color: #ffffff;
+            border-radius: 8px;
+            cursor: crosshair;
+            display: block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Drawing Pad</h1>
+        <svg id="drawingCanvas" width="700" height="600"></svg>
+         <button id="clearBtn">🗑️ Clear Board</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
